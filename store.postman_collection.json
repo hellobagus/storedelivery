@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "40d4190b-a009-4c01-8747-e82b166219c9",
+		"name": "store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": " http://localhost:3001/api/order/store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/api/order/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/order/store/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/api/order/store/1"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/order/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id_customer\": 4,\n        \"alamat_pengirim\": \"Jakarta Selatan\",\n        \"alamat_penerima\": \"Jakarta Timur\",\n        \"jenis_pengiriman\": \"Yes\",\n        \"berat_barang\": \"8kg\",\n        \"harga_ongkir\": 18000,\n        \"matauang\": \"IDR\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/order/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/schedule/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id_order\": 115,\n        \"id_customer\": 4,\n        \"alamat_penerima\": \"Jakarta Timur\",\n        \"jenis_pengiriman\": \"Yes\",\n        \"jadwal_pengiriman\": \"2013-06-10\",\n        \"total_harga\": \"18000\",\n        \"matauang\" :\"IDR\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/schedule/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/shipment/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomer_resi\" : 4,\n    \"id_order\" : 113,\n     \"id_customer\": 2,\n     \"alamat_penerima\": \"Jakarta Timur\",\n     \"jenis_pengiriman\": \"Yes\",\n     \"jadwal_pengiriman\": \"2013-06-10\",\n     \"total_harga\": \"18000\",\n     \"matauang\" :\"IDR\",\n     \"status_pengiriman\":\"Proses\",\n     \"estimasi_pengiriman\" : \"3 hari\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/shipment/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/shipment/store",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"nomer_resi\": 4,\n     \"id_order\" : 112,\n     \"jadwal_pengiriman\": \"2013-06-10\",\n     \"status_pengiriman\":\"Trans Pelabuhan\",\n     \"estimasi_pengiriman\" : \"3 hari\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/shipment/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/shipment/store/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/api/shipment/store/2"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/shipment/store",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"nomer_resi\": 5,\n     \"id_order\" : 112,\n     \"jadwal_pengiriman\": \"2013-06-10\",\n     \"status_pengiriman\":\"Trans\",\n     \"estimasi_pengiriman\" : \"3 hari\",\n     \"lokasi_barang\": \"Gudang Jakarta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/shipment/store"
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3001/api/confrim/store",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"nomer_resi\": 1,\n     \"id_order\" : 112,\n     \"jadwal_pengiriman\": \"2013-06-10\",\n     \"status_pengiriman\":\"Trans\",\n     \"estimasi_pengiriman\" : \"3 hari\",\n     \"lokasi_barang\": \"Gudang Jakarta\",\n     \"konfirmasi_pengiriman\": \"Terima Barang\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/confrim/store"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/api/order/store",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3030/api/order/store"
+			},
+			"response": []
+		}
+	]
+}
